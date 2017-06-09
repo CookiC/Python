@@ -8,7 +8,7 @@ while(data==''):
 	data=input('输入用户名：')
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # 建立连接:
-s.connect(('192.168.3.6', 2080))
+s.connect(('127.0.0.1', 2080))
 s.settimeout(2)
 s.send(data.encode('utf-8'))
 # 接收欢迎消息:
