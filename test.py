@@ -1,12 +1,18 @@
-import socket
-import struct
+#多项式生成使用指南
+#poly = PolynomialFeatures(2)
+#X1 = poly.fit_transform(X)
+#scaler.fit(X1)
+#X1 = scaler.transform(X1)
+#print(X.shape,X1.shape)
+import cmath
+import numpy.random
+import sklearn
+import heapq
+from sklearn.neighbors import NearestNeighbors
+from sklearn.model_selection import train_test_split
+import plotly.graph_objs as go
+import numpy as np
 
-def get_ip_address(ifname):
-    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    return socket.inet_ntoa(fcntl.ioctl(
-        s.fileno(),
-        0x8915,  # SIOCGIFADDR
-        struct.pack('256s', ifname[:15])
-    )[20:24])
-
-get_ip_address('eth0')
+a = np.arange(10)
+b = np.arange(10)
+print(b[a<5])
